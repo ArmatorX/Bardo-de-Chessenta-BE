@@ -17,8 +17,43 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+	
+	<repositories>
+		<!-- Repositorio del JDA -->
+		<repository>
+		    <id>jcenter</id>
+		    <name>jcenter-bintray</name>
+		    <url>https://jcenter.bintray.com</url>
+		</repository>
+		
+		<!-- Repositorio de Lava Player -->
+		<repository>
+		    <id>central</id>
+		    <name>bintray</name>
+		    <url>https://jcenter.bintray.com</url>
+  		</repository>
+	</repositories>
 
 	<dependencies>
+		<!-- Wrapper de la API de Discord -->
+		<dependency>
+		    <groupId>net.dv8tion</groupId>
+		    <artifactId>JDA</artifactId>
+		    <version>4.2.0_168</version>
+		</dependency>
+		
+		<!-- Audio Player for Discord -->
+		<dependency>
+		    <groupId>com.sedmelluq</groupId>
+		    <artifactId>lavaplayer</artifactId>
+		    <version>1.3.52</version>
+	 	</dependency>
+
+		<dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		</dependency>
+	
 		<dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-data-jpa</artifactId>

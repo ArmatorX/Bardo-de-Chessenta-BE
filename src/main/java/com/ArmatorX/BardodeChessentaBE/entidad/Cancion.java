@@ -1,4 +1,4 @@
-package com.ArmatorX.BardodeChessentaBE.modelo;
+package com.ArmatorX.BardodeChessentaBE.entidad;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,6 +23,7 @@ public class Cancion {
 	private Integer id;
 	private String nombre;
 	private String link;
+	private String origen;
 	@ManyToOne
 	private EmocionEspecifica emocion;
 	@ManyToOne

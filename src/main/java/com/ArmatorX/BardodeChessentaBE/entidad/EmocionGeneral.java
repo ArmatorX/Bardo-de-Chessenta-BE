@@ -1,4 +1,4 @@
-package com.ArmatorX.BardodeChessentaBE.modelo;
+package com.ArmatorX.BardodeChessentaBE.entidad;
 
 import java.util.Set;
 
