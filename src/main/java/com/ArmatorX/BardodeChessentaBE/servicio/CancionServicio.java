@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import com.ArmatorX.BardodeChessentaBE.bot.MusicBot;
 import com.ArmatorX.BardodeChessentaBE.entidad.Cancion;
+import com.ArmatorX.BardodeChessentaBE.fileManager.FileManager;
 import com.ArmatorX.BardodeChessentaBE.repositorio.CancionRepositorio;
 
 import net.dv8tion.jda.api.exceptions.RateLimitedException;
@@ -26,10 +27,10 @@ public class CancionServicio {
 	@PostConstruct
     public void init() {
 		// Inicialización del bot.
-		String token = "NjAxMTcyNTg2MzkwMzU1OTY4.XS-bmQ.3bxlDsk41VvwFYMLZaWZhUk2Mnw";
+		String token = FileManager.getTokenDiscord();
+		System.out.println("[Bardo de Chessenta] INFO Se leyó el token correctamente.");
 		
 		this.bot = new MusicBot(token);
-		
 		System.out.println("[Bardo de Chessenta] INFO El bot se inicializó correctamente.");
     }
 		

@@ -55,6 +55,9 @@ buildNumber.properties
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+### Archivos de configuración ###
+discord.cfg
+
 # Package Files #
 *.jar
 *.war
