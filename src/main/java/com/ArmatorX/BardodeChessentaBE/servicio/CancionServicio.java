@@ -26,7 +26,7 @@ public class CancionServicio {
 	@PostConstruct
     public void init() {
 		// Inicialización del bot.
-		String token = "NjAxMTcyNTg2MzkwMzU1OTY4.XS-bmQ.X-d80c8td7Vj-g45OVXbp614v5o";
+		String token = "NjAxMTcyNTg2MzkwMzU1OTY4.XS-bmQ.3bxlDsk41VvwFYMLZaWZhUk2Mnw";
 		
 		this.bot = new MusicBot(token);
 		
