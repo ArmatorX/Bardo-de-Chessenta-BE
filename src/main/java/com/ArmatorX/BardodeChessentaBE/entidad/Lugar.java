@@ -1,4 +1,4 @@
-package com.ArmatorX.BardodeChessentaBE.modelo;
+package com.ArmatorX.BardodeChessentaBE.entidad;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
