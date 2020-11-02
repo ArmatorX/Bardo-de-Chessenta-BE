@@ -4,8 +4,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.ArmatorX.BardodeChessentaBE.entidad.EmocionEspecifica;
+import com.ArmatorX.BardodeChessentaBE.entidad.EmocionGeneral;
 
 @Repository
-public interface EmocionEspecificaRepositorio extends JpaRepository<EmocionEspecifica, Integer>{
+public interface EmocionGeneralRepositorio extends JpaRepository<EmocionGeneral, Integer>{
 
 }

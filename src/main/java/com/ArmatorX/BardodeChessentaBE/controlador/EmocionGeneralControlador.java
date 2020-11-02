@@ -9,17 +9,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ArmatorX.BardodeChessentaBE.entidad.EmocionEspecifica;
-import com.ArmatorX.BardodeChessentaBE.servicio.EmocionEspecificaServicio;
+import com.ArmatorX.BardodeChessentaBE.entidad.EmocionGeneral;
+import com.ArmatorX.BardodeChessentaBE.servicio.EmocionGeneralServicio;
 
 @RestController
-@RequestMapping("/emociones-especificas/")
+@RequestMapping("/emociones/")
 @CrossOrigin(origins = "*")
-public class EmocionEspecificaControlador {
+public class EmocionGeneralControlador {
 	@Autowired
-	private EmocionEspecificaServicio servicio;
+	private EmocionGeneralServicio servicio;
 	
 	@GetMapping
-	public Page<EmocionEspecifica> listarTodas(Pageable pagina) {
+	public Page<EmocionGeneral> listarTodas(Pageable pagina) {
 		return servicio.listarTodas(pagina);
 	}
 }
