@@ -64,6 +64,7 @@ public class CancionControlador {
 		servicio.reproducir(id);
 	}
 	
+	// BÚSQUEDA SIMPLE
 	@RequestMapping(params = {"busqueda"})
 	public Page<Cancion> buscarPorNombreUOrigenOExtras(String busqueda, Pageable pagina) {
 		return servicio.buscarPorNombreUOrigenOExtras(busqueda, pagina);

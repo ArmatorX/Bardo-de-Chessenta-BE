@@ -85,6 +85,7 @@ public class CancionServicio {
 		}
 	}
 
+	// BÚSQUEDA SIMPLE
 	public Page<Cancion> buscarPorNombreUOrigenOExtras(String busqueda, Pageable pagina) {
 		return repositorio.findByNombreContainingOrOrigenContainingOrExtrasContainingAllIgnoreCase(busqueda, busqueda, busqueda, pagina);
 	}
