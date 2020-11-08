@@ -13,6 +13,8 @@ import org.springframework.stereotype.Service;
 
 import com.ArmatorX.BardodeChessentaBE.bot.MusicBot;
 import com.ArmatorX.BardodeChessentaBE.entidad.Cancion;
+import com.ArmatorX.BardodeChessentaBE.entidad.EmocionEspecifica;
+import com.ArmatorX.BardodeChessentaBE.entidad.EmocionGeneral;
 import com.ArmatorX.BardodeChessentaBE.fileManager.FileManager;
 import com.ArmatorX.BardodeChessentaBE.repositorio.CancionRepositorio;
 
@@ -81,5 +83,25 @@ public class CancionServicio {
 		} else {
 			System.out.println("[Bardo de Chessenta] ERROR No se encontró la canción solicitada.");
 		}
+	}
+
+	public Page<Cancion> buscarPorNombreUOrigenOExtras(String busqueda, Pageable pagina) {
+		return repositorio.findByNombreContainingOrOrigenContainingOrExtrasContainingAllIgnoreCase(busqueda, busqueda, busqueda, pagina);
+	}
+	
+	public Page<Cancion> buscarPorEmocionEspecifica(Integer emocionEspecifica, Pageable pagina) {
+		return repositorio.findByEmocion_id(emocionEspecifica, pagina);
+	}
+	
+	public Page<Cancion> buscarPorEmocionGeneral(Integer emocionGeneral, Pageable pagina) {
+		return repositorio.findByEmocionGeneral_id(emocionGeneral, pagina);
+	}
+
+	public Page<Cancion> buscarPorNombreUOrigenOExtrasYEmocionEspecifica(String busqueda, Integer emocionEspecifica, Pageable pagina) {
+		return repositorio.findByBusquedaContainingIgnoreCaseAndEmocionEspecifica_id(busqueda, emocionEspecifica, pagina);
+	}
+	
+	public Page<Cancion> buscarPorNombreUOrigenOExtrasYEmocionGeneral(String busqueda, Integer emocionGeneral, Pageable pagina) {
+		return repositorio.findByBusquedaContainingIgnoreCaseAndEmocionGeneral_id(busqueda, emocionGeneral, pagina);
 	}
 }

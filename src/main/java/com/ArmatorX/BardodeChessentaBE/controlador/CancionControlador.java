@@ -2,8 +2,6 @@ package com.ArmatorX.BardodeChessentaBE.controlador;
 
 import java.util.Optional;
 
-import javax.security.auth.login.LoginException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,9 +16,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ArmatorX.BardodeChessentaBE.entidad.Cancion;
+import com.ArmatorX.BardodeChessentaBE.entidad.EmocionEspecifica;
+import com.ArmatorX.BardodeChessentaBE.entidad.EmocionGeneral;
 import com.ArmatorX.BardodeChessentaBE.servicio.CancionServicio;
 
-import net.dv8tion.jda.api.exceptions.RateLimitedException;
 
 @RestController
 @RequestMapping("/canciones/")
@@ -63,5 +62,30 @@ public class CancionControlador {
 	@RequestMapping(value = "/reproducir/{id}", method = RequestMethod.GET)
 	public void reproducir(@PathVariable(name = "id") Integer id) {
 		servicio.reproducir(id);
+	}
+	
+	@RequestMapping(params = {"busqueda"})
+	public Page<Cancion> buscarPorNombreUOrigenOExtras(String busqueda, Pageable pagina) {
+		return servicio.buscarPorNombreUOrigenOExtras(busqueda, pagina);
+	}
+	
+	@RequestMapping(params = {"emocionEspecifica"}) 
+	public Page<Cancion> buscarPorEmocionEspecifica(Integer emocionEspecifica, Pageable pagina) {
+		return servicio.buscarPorEmocionEspecifica(emocionEspecifica, pagina);
+	}
+	
+	@RequestMapping(params = {"emocionGeneral"})
+	public Page<Cancion> buscarPorEmocionGeneral(Integer emocionGeneral, Pageable pagina) {
+		return servicio.buscarPorEmocionGeneral(emocionGeneral, pagina);
+	}
+	
+	@RequestMapping(params = {"busqueda", "emocionEspecifica"})
+	public Page<Cancion> buscarPorNombreUOrigenOExtrasYEmocionEspecifica(String busqueda, Integer emocionEspecifica, Pageable pagina) {
+		return servicio.buscarPorNombreUOrigenOExtrasYEmocionEspecifica(busqueda, emocionEspecifica, pagina);
+	}
+	
+	@RequestMapping(params = {"busqueda", "emocionGeneral"})
+	public Page<Cancion> buscarPorNombreUOrigenOExtrasYEmocionGeneral(String busqueda, Integer emocionGeneral, Pageable pagina) {
+		return servicio.buscarPorNombreUOrigenOExtrasYEmocionGeneral(busqueda, emocionGeneral, pagina);
 	}
 }
