@@ -70,6 +70,7 @@ public class CancionServicio {
 		repositorio.deleteById(id);
 	}
 
+	// 	BOT
 	public void reproducir(Integer id) {		
 		Optional<Cancion> cancion = buscarPorId(id);
 		
@@ -83,6 +84,13 @@ public class CancionServicio {
 		} else {
 			System.out.println("[Bardo de Chessenta] ERROR No se encontró la canción solicitada.");
 		}
+	}
+	
+	public boolean verificarConexiónBot() {
+		if (this.bot.getGuild() != null) {
+			return true;
+		}
+		return false;
 	}
 
 	// BÚSQUEDA SIMPLE

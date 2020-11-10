@@ -59,9 +59,15 @@ public class CancionControlador {
 		servicio.eliminar(id);
 	}
 	
+	// BOT	
 	@RequestMapping(value = "/reproducir/{id}", method = RequestMethod.GET)
 	public void reproducir(@PathVariable(name = "id") Integer id) {
 		servicio.reproducir(id);
+	}
+	
+	@RequestMapping(value = "/estado-bot/", method = RequestMethod.GET)
+	public boolean verificarConexiónBot() {
+		return servicio.verificarConexiónBot();
 	}
 	
 	// BÚSQUEDA SIMPLE
