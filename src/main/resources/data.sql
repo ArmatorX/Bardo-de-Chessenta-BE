@@ -80,7 +80,7 @@ INSERT INTO lugar (id, nombre) VALUES
 	
 /* CANCION */
 INSERT INTO cancion (id, extras, link, nombre, origen, emocion_id, lugar_id) VALUES
-	(hibernate_sequence.nextval, '', 'https://www.youtube.com/watch?v=olmhqonMXBo', 'Lament of the Angel', 'The Binding of Isaac OST', 16, 37),
+	(hibernate_sequence.nextval, '', 'https://www.youtube.com/watch?v=olmhqonMXBo', 'Lament of the Angel', 'The Binding of Isaac: Wrath of the Lamb OST', 16, 37),
 	(hibernate_sequence.nextval, 'Moksha Ramas', 'https://www.youtube.com/watch?v=Isl-EY2dn1Y', 'Phobos Anomaly (Cover)', 'Doom OST', 24, 37),
 	(hibernate_sequence.nextval, 'Guerra/Batalla', 'https://www.youtube.com/watch?v=k4zh8RwhjZ0', 'The Beast', 'Sicario OST', 29, 37),
 	(hibernate_sequence.nextval, '', 'https://www.youtube.com/watch?v=wEWF2xh5E8s', 'Sadness and Sorrow', 'Naruto OST', 14, 39),
@@ -102,4 +102,4 @@ INSERT INTO cancion (id, extras, link, nombre, origen, emocion_id, lugar_id) VAL
 	(hibernate_sequence.nextval, '', 'https://www.youtube.com/watch?v=5nz6XwMhp3U', 'First Step', 'Interstellar OST', 25, 38),
 	(hibernate_sequence.nextval, '', 'https://www.youtube.com/watch?v=oIIuwtDL_ok', 'Queen''s Gardens', 'Hollow Knight OST', 30, 38),
 	(hibernate_sequence.nextval, 'Boss fight', 'https://www.youtube.com/watch?v=FT3sXT9x9CU', 'Ascension', 'The Binding of Isaac: Rebirth OST', 9, 37),
-	(hibernate_sequence.nextval, '', 'https://www.youtube.com/watch?v=olmhqonMXBo', 'Lament of the Angel', 'The Binding of Isaac: Wrath of the Lamb OST', 16, 37);
+	(hibernate_sequence.nextval, 'Pelea contra Tiamat', 'https://www.youtube.com/watch?v=0RMnjL6X2gg', 'My Innermost Apocalypse', 'The Binding of Isaac: Wrath of the Lamb OST', 24, 37);
