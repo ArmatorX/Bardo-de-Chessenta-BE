@@ -9,7 +9,7 @@ CREATE SEQUENCE hibernate_sequence
 DROP TABLE IF EXISTS emocion_especifica;
  
 CREATE TABLE emocion_especifica (
-	id INTEGER NOT NULL AUTO_INCREMENT,
+	id INTEGER NOT NULL,
 	nombre VARCHAR(128) NOT NULL,
 	PRIMARY KEY (id)
 );
@@ -17,7 +17,7 @@ CREATE TABLE emocion_especifica (
 DROP TABLE IF EXISTS emocion_general;
  
 CREATE TABLE emocion_general (
-	id INTEGER NOT NULL AUTO_INCREMENT,
+	id INTEGER NOT NULL,
 	nombre VARCHAR(128) NOT NULL,
 	PRIMARY KEY (id)
 );
@@ -40,13 +40,13 @@ ALTER TABLE emocion_general_emociones
 DROP TABLE IF EXISTS lugar;
  
 CREATE TABLE lugar (
-	id INTEGER NOT NULL AUTO_INCREMENT,
+	id INTEGER NOT NULL,
 	nombre VARCHAR(128) NOT NULL,
 	PRIMARY KEY (id)
 );
 
 CREATE TABLE cancion (
-	id INTEGER NOT NULL AUTO_INCREMENT,
+	id INTEGER NOT NULL,
 	extras VARCHAR(128) NOT NULL,
 	link VARCHAR(128) NOT NULL,
 	nombre VARCHAR(128) NOT NULL,

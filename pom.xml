@@ -34,7 +34,7 @@
   		</repository>
 	</repositories>
 
-	<dependencies>
+	<dependencies>	
 		<!-- Wrapper de la API de Discord -->
 		<dependency>
 		    <groupId>net.dv8tion</groupId>

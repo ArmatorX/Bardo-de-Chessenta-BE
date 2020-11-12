@@ -8,18 +8,18 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ArmatorX.BardodeChessentaBE.entidad.Lugar;
-import com.ArmatorX.BardodeChessentaBE.servicio.LugarServicio;
+import com.ArmatorX.BardodeChessentaBE.entidad.EmocionGeneral;
+import com.ArmatorX.BardodeChessentaBE.servicio.EmocionGeneralServicio;
 
 @RestController
-@RequestMapping("/lugares/")
+@RequestMapping("/emociones/")
 @CrossOrigin(origins = "*")
-public class LugarControlador {
+public class EmocionGeneralControlador {
 	@Autowired
-	private LugarServicio servicio;
+	private EmocionGeneralServicio servicio;
 	
 	@GetMapping
-	public List<Lugar> listarTodos() {
-		return servicio.listarTodos();
+	public List<EmocionGeneral> listarTodas() {
+		return servicio.listarTodas();
 	}
 }

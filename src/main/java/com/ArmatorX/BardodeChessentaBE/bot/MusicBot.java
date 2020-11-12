@@ -132,6 +132,23 @@ public class MusicBot extends ListenerAdapter
     		manager.openAudioConnection(this.channel);
     		
     		System.out.println("[Bardo de Chessenta] INFO Bot conectado.");
+    	} else if (mensaje.equals("!disconnect")) {
+    		System.out.println("[Bardo de Chessenta] INFO Deteniendo transmisión de audio.");
+
+    		this.audioPlayer.destroy();
+    		
+    		System.out.println("[Bardo de Chessenta] INFO Cerrando la conexión con el servidor.");
+    		
+    		AudioManager manager = this.guild.getAudioManager();
+    		
+    		manager.closeAudioConnection();
+    		
+    		System.out.println("[Bardo de Chessenta] INFO Limpiando estado del bot.");
+    		
+    		this.guild = null;
+    		this.channel = null;
+    		
+    		System.out.println("[Bardo de Chessenta] INFO El bot se desconectó correctamente.");
     	}
     }
 }
