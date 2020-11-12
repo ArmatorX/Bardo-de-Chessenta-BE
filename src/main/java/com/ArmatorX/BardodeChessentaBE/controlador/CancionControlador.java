@@ -59,11 +59,6 @@ public class CancionControlador {
 		servicio.eliminar(id);
 	}
 	
-	@RequestMapping(value = "/{id]", method = RequestMethod.GET)
-	public Optional<Cancion> getCancionById(@PathVariable(name = "id") Integer id) {
-		return servicio.getCancionById(id);
-	}
-	
 	// BOT	
 	@RequestMapping(value = "/reproducir/{id}", method = RequestMethod.GET)
 	public void reproducir(@PathVariable(name = "id") Integer id) {
