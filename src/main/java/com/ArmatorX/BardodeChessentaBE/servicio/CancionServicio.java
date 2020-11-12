@@ -69,6 +69,10 @@ public class CancionServicio {
 	public void eliminar(Integer id) {
 		repositorio.deleteById(id);
 	}
+	
+	public Optional<Cancion> getCancionById(Integer id) {
+		return repositorio.findById(id);
+	}
 
 	// 	BOT
 	public void reproducir(Integer id) {		
