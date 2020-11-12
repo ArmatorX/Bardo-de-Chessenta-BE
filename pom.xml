@@ -10,10 +10,11 @@
 	</parent>
 	<groupId>com.ArmatorX</groupId>
 	<artifactId>Bardo-de-Chessenta-BE</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>Bardo de Chessenta</name>
 	<description>Bardo de Chessenta es una GUI simple para un bot de Discord de música, utilizado con fines de ambientación de partidas de rol.</description>
-
+	<packaging>jar</packaging>
+	
 	<properties>
 		<java.version>11</java.version>
 	</properties>
